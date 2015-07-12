@@ -9,12 +9,20 @@ import com.kinbiko.hangman.resource.HangmanWord;
 import com.kinbiko.hangman.service.WordService;
 
 
+/**
+ * REST controller for getting hangman words.
+ */
 @RestController
 public class WordController {
 	
+	/** The {@link WordService}. */
 	@Autowired
 	private WordService wordService;
 	
+	/**
+	 * Entry point for '/hangman'. Will return a JSON representation of a {@link HangmanWord}.
+	 * @return the {@link HangmanWord}.
+	 */
 	@RequestMapping(method=RequestMethod.GET,value="/hangman")
 	public HangmanWord hangmanWord(){
 		return wordService.getHangmanWord();

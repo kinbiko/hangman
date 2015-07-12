@@ -12,20 +12,22 @@ import com.kinbiko.hangman.resource.HangmanWord
 @Service
 public class WordService {
 	
-	private int numberOfWords;
+	/** The number of words in the word list. */
+	private int numberOfWords
 
-	private ArrayList<String> wordList;
+	/** The word list. */
+	private ArrayList<String> wordList
 	
 	/**
 	 * Returns a random word from the wordlist.
-	 * @return a hangmang word.
+	 * @return a hangman word.
 	 */
 	public HangmanWord getHangmanWord() {
-		return new HangmanWord(wordList.get((int)Math.random()*numberOfWords));
+		return new HangmanWord(wordList.get((int)Math.random()*numberOfWords))
 	}
 	
 	/**
-	 * After creating this service, scan the word list and add each line and store each line as a String.
+	 * After creating this service instance, scan the word list and add each line and store each line as a String.
 	 */
 	@PostConstruct
 	public void parseWordList(){
@@ -34,7 +36,10 @@ public class WordService {
 		numberOfWords = wordList.size
 	}
 	
+	/**
+	 * @return The number of words in the word list.
+	 */
 	public int getNumberOfWords(){
-		return numberOfWords;
+		return numberOfWords
 	}
 }

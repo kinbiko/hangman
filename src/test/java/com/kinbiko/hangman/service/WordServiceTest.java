@@ -13,10 +13,14 @@ import org.springframework.test.util.ReflectionTestUtils;
 import com.kinbiko.hangman.HangmanConfig;
 import com.kinbiko.hangman.resource.HangmanWord;
 
+/**
+ * Testing the {@link WordService} unit.
+ */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes=HangmanConfig.class)
 public class WordServiceTest {
 	
+	/** The unit to test. */
 	@Autowired
 	private WordService service;
 	
@@ -26,13 +30,13 @@ public class WordServiceTest {
 	@SuppressWarnings("unchecked")
 	@Test
 	public void testParseWordList(){
-		ArrayList<String> wordList = (ArrayList<String>) ReflectionTestUtils.getField(service, "wordList");
+		final ArrayList<String> wordList = (ArrayList<String>) ReflectionTestUtils.getField(service, "wordList");
 		Assert.assertEquals(service.getNumberOfWords(), wordList.size());
 		Assert.assertNotEquals(0, service.getNumberOfWords());
 	}
 	
 	/**
-	 * Tests that two words retreived after one another are not the same. 
+	 * Tests that two words retrieved after one another are not the same. 
 	 * FIXME: this is a non-deterministic test, as there's a 1/100 000 000 chance it will fail, assuming uniform distribution.
 	 */
 	@Test
