@@ -1,0 +1,4 @@
+com/kinbiko/hangman/HangmanConfig.class
+com/kinbiko/hangman/resource/HangmanWord.class
+com/kinbiko/hangman/service/WordService.class
+com/kinbiko/hangman/controller/WordController.class

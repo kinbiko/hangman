@@ -1,0 +1,5 @@
+/home/dev/dev/kinbiko-web/hangman/src/main/java/com/kinbiko/hangman/Main.java
+/home/dev/dev/kinbiko-web/hangman/src/main/java/com/kinbiko/hangman/service/WordService.groovy
+/home/dev/dev/kinbiko-web/hangman/src/main/java/com/kinbiko/hangman/HangmanConfig.java
+/home/dev/dev/kinbiko-web/hangman/src/main/java/com/kinbiko/hangman/resource/HangmanWord.java
+/home/dev/dev/kinbiko-web/hangman/src/main/java/com/kinbiko/hangman/controller/WordController.java
